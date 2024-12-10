@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha</title>
+    <script>
+        function primeiraPergunta(resposta) {
+            if (resposta === 'sim' || resposta === 'nao') {
+                segundaPergunta();
+            }
+        }
+
+        function segundaPergunta(resposta) {
+            if (resposta === 'sim') {
+                window.location.href = 'https://youtu.be/eQRc3EHEbIM?si=OynScEBncMROZSPq';
+            } else if (resposta === 'nao') {
+                window.location.href = 'https://youtu.be/m7fFm8Sw7pE?si=qTawbWCTlRqdQSpY';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h1>Você é baitola?</h1>
+        <button onclick="primeiraPergunta('sim')">Sim</button>
+        <button onclick="primeiraPergunta('nao')">Não</button>
+    </div>
+
+    <div id="segundaPergunta" style="display:none;">
+        <h1>Você está mentindo?</h1>
+        <button onclick="segundaPergunta('sim')">Sim</button>
+        <button onclick="segundaPergunta('nao')">Não</button>
+    </div>
+
+</body>
+</html>
+
