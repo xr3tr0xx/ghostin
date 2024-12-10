@@ -6,12 +6,15 @@
     <title>Escolha</title>
     <script>
         function primeiraPergunta(resposta) {
-            if (resposta === 'sim' || resposta === 'nao') {
-                segundaPergunta();
-            }
+            // Esconde a primeira pergunta
+            document.getElementById("primeiraPergunta").style.display = "none";
+
+            // Mostra a segunda pergunta
+            document.getElementById("segundaPergunta").style.display = "block";
         }
 
         function segundaPergunta(resposta) {
+            // Redireciona com base na resposta da segunda pergunta
             if (resposta === 'sim') {
                 window.location.href = 'https://youtu.be/eQRc3EHEbIM?si=OynScEBncMROZSPq';
             } else if (resposta === 'nao') {
@@ -21,17 +24,22 @@
     </script>
 </head>
 <body>
-    <div>
+    <!-- Primeira Pergunta -->
+    <div id="primeiraPergunta">
         <h1>Você é baitola?</h1>
         <button onclick="primeiraPergunta('sim')">Sim</button>
         <button onclick="primeiraPergunta('nao')">Não</button>
     </div>
 
+    <!-- Segunda Pergunta (oculta inicialmente) -->
     <div id="segundaPergunta" style="display:none;">
         <h1>Você está mentindo?</h1>
         <button onclick="segundaPergunta('sim')">Sim</button>
         <button onclick="segundaPergunta('nao')">Não</button>
     </div>
+</body>
+</html>
+
 
 </body>
 </html>
